@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Part 1 - Artificial Neural Networks (ANN).iml" filepath="$PROJECT_DIR$/.idea/Part 1 - Artificial Neural Networks (ANN).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/supervised-learning.iml" filepath="$PROJECT_DIR$/.idea/supervised-learning.iml" />
     </modules>
   </component>
 </project>
