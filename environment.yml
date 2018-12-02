@@ -30,6 +30,7 @@ dependencies:
   - h5py=2.8.0=py27h878fce3_3
   - hdf5=1.10.2=hfa1e0ec_1
   - intel-openmp=2019.1=144
+  - jpeg=9b=he5867d9_2
   - keras=2.2.4=0
   - keras-applications=1.0.6=py27_0
   - keras-base=2.2.4=py27_0
@@ -43,6 +44,7 @@ dependencies:
   - libgfortran=3.0.1=h93005f0_2
   - libpng=1.6.35=ha441bb4_0
   - libprotobuf=3.6.1=hd9629dc_0
+  - libtiff=4.0.9=hcb84e12_2
   - linecache2=1.0.0=py27_0
   - llvm=4.0.1=1
   - llvm-lto-tapi=4.0.1=1
@@ -56,9 +58,11 @@ dependencies:
   - ncurses=6.1=h0a44026_0
   - numpy=1.15.4=py27h6a91979_0
   - numpy-base=1.15.4=py27h8a80b8c_0
+  - olefile=0.46=py27_0
   - openssl=1.1.1a=h1de35cc_0
   - pandas=0.23.4=py27h6440ff4_0
   - pbr=5.1.1=py27_0
+  - pillow=5.3.0=py27hb68e598_0
   - pip=18.1=py27_0
   - protobuf=3.6.1=py27h0a44026_0
   - pyparsing=2.3.0=py27_0
@@ -85,6 +89,7 @@ dependencies:
   - unittest2=1.1.0=py27_0
   - werkzeug=0.14.1=py27_0
   - wheel=0.32.3=py27_0
+  - xz=5.2.4=h1de35cc_4
   - yaml=0.1.7=hc338f04_2
   - zlib=1.2.11=h1de35cc_3
 prefix: /anaconda2/envs/AI-AZ
