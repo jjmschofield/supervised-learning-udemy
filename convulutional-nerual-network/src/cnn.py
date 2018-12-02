@@ -1,8 +1,7 @@
 # Data pre-processing is not required as Karis can handle this for us
 # Based on the folder structure of the dataset
 import os
-os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # mac issue
-
+import time
 from keras.models import Sequential
 from keras.layers import Convolution2D
 from keras.layers import MaxPool2D
@@ -10,11 +9,18 @@ from keras.layers import Flatten
 from keras.layers import Dense
 from keras.preprocessing.image import ImageDataGenerator
 
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
+
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'  # mac issue
+
 # Structure
 # Convolution -> Pooling -> Flattening -> Input -> Hidden -> Output
 
 # Config
 image_dimension = 64  # can be bigger but will slow processing
+dataset_path = os.path.dirname(os.path.abspath(__file__)) + '/../course-resources/dataset'
+model_path = os.path.dirname(os.path.abspath(__file__)) + '/model.' + str(time.time()) + '.h5'
 
 
 # The convolution layer creates feature maps from an image
@@ -70,8 +76,6 @@ classifier.add(create_fully_connected_output_layer())
 # Binary cross entropy is used as we have a binary outcome (cat vs dog), otherwise we would use cross_entropy
 classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-dataset_path = os.path.dirname(os.path.abspath(__file__)) + '/../course-resources/dataset'
-
 # Image augmentation
 # Prevent over fitting by creating lots of batches and adding random transformations (like rotating, flipping etc)
 # This improves accuracy with the same amount of data!
@@ -102,3 +106,5 @@ classifier.fit_generator(
     epochs=25,
     validation_data=test_set,
     validation_steps=2000)  # Number of images
+
+classifier.save(model_path);
